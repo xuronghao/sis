@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+    <!-- <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head> -->
     <body>
         <div class="container">
             <h1>Simple image search engine</h1>
@@ -14,13 +14,252 @@
             {% endif %}
             <h2>Results:</h2>
             {% for score in scores %}
-            <figure style="float: left; margin-right: 20px; margin-bottom: 20px;">
+            <figure   class="datupian" style="float: left; margin-right: 20px; margin-bottom: 20px;display: none">
                 <img src="{{ score[1] }}" height="200px">
-                <figcaption>{{ score[0] }}</figcaption>
+                <figcaption class="tupian" >{{ score }}</figcaption>
             </figure>
             {% endfor %}
         </div>
+        <script>
+                window.onload = function(){
+                    var newNameArr = [
+                        // {
+                        //     id : qhylh,
+                        //     name : "故宫博物院藏文物珍品大系青花釉里红中册"
+                        // },
+                        // {
+                        //     id : Dytcywb12p096,
+                        //     name : "东洋陶瓷英文版第十二卷" 
+                        // },
+                        {
+                            id : "1749",
+                            name : ""
+                        },
+                        {
+                            id : "4711",
+                            name : "清代官窑瓷器史"
+                        },
+                        {
+                            id : "bnyl",
+                            name : "百年稚柳"
+                        },
+                        {
+                            id : "bytch",
+                            name : "白云堂藏画下"
+                        },
+                        {
+                            id : "cgmsg",
+                            name : "出光美术馆藏品图录：中国陶瓷"
+                        },
+                        {
+                            id : "chcqtztl",
+                            name : "成化瓷器特展图录"
+                        },
+                        {
+                            id : "cyws",
+                            name : "MING PORCELAIN"
+                        },
+                        {
+                            id : "dytc",
+                            name : "东洋陶瓷日文版第12卷"
+                        },
+                        {
+                            id : "Dytcywb1p",
+                            name : "东洋陶瓷英文版第1卷"
+                        },
+                        {
+                            id : "Dytcywb2p",
+                            name : "东洋陶瓷英文版第2卷"
+                        },
+                        {
+                            id : "Dytcywb3p",
+                            name : "东洋陶瓷英文版第3卷"
+                        },
+                        {
+                            id : "Dytcywb4p",
+                            name : "东洋陶瓷英文版第4卷"
+                        },
+                        {
+                            id : "Dytcywb5p",
+                            name : "东洋陶瓷英文版第5卷"
+                        },
+                        {
+                            id : "Dytcywb6p",
+                            name : "东洋陶瓷英文版第6卷"
+                        },
+                        {
+                            id : "Dytcywb7p",
+                            name : "东洋陶瓷英文版第7卷"
+                        },
+                        {
+                            id : "Dytcywb8p",
+                            name : "东洋陶瓷英文版第8卷"
+                        },
+                        {
+                            id : "Dytcywb9p",
+                            name : "东洋陶瓷英文版第9卷"
+                        },
+                        {
+                            id : "Dytcywb10p",
+                            name : "东洋陶瓷英文版第10卷"
+                        },
+                        {
+                            id : "Dytcywb11p",
+                            name : "东洋陶瓷英文版第11卷"
+                        },
+                        {
+                            id : "Dytcywb12p",
+                            name : "东洋陶瓷英文版第12卷"
+                        },
+                        {
+                            id : "ggcpdx",
+                            name : "2011秋保利近现代书画二"
+                        },
+                        {
+                            id : "ggzckyqcqtl",
+                            name : "故宫珍藏康雍乾瓷器图录"
+                        },
+                        {
+                            id : "hrqbs",
+                            name : "画人齐白石" 
+                        },
+                        {
+                            id : "hsyk",
+                            name : "湖社月刊"
+                        },
+                        {
+                            id : "jcxy",
+                            name : "金成旭映：清雍正珐琅彩瓷"
+                        },
+                        {
+                            id : "mjhmqbs",
+                            name : "名家翰墨·齐白石"
+                        },
+                        {
+                            id : "mqcqjd",
+                            name : "明清瓷器鉴定"
+                        },
+                        {
+                            id : "qhylh",
+                            name : "故宫博物院藏 青花釉里红中册"
+                        },
+                        {
+                            id : "qszwwdz",
+                            name : "清世宗文物大展"
+                        },
+                        {
+                            id : "rbzhp",
+                            name : "荣宝斋画谱·傅抱石"
+                        },
+                        {
+                            id : "Sjtcqj13sly",
+                            name : "世界陶瓷全集13宋辽元"
+                        },
+                        {
+                            id : "Sjtcqj14m",
+                            name : "世界陶瓷全集14明"
+                        },
+                        {
+                            id : "Sjtcqj15q",
+                            name : "世界陶瓷全集15清"
+                        },
+                        {
+                            id : "syzdtcsj",
+                            name : "孙瀛洲的陶瓷世界"
+                        },
+                        {
+                            id : "whfjd",
+                            name : "吴湖帆近代作品"
+                        },
+                        {
+                            id : "ycqjxs",
+                            name : "中国陶瓷全集明上"
+                        },
+                        {
+                            id : "ykyqx",
+                            name : "也可以清心"
+                        },
+                        {
+                            id : "zbc1",
+                            name : "周碧初画集-学林出版社"
+                        },
+                        {
+                            id : "zbc2",
+                            name : "周碧初"
+                        },
+                        {
+                            id : "zbc3",
+                            name : "周碧初画集-上海人民美术出版社"
+                        },
+                        {
+                            id : "zcyjzc",
+                            name : "赵从衍家族藏重要中国瓷器和玉雕"
+                        },
+                        {
+                            id : "zdq90jnz",
+                            name : "张大千九十纪念展"
+                        },
+                        {
+                            id : "zgjdhh",
+                            name : "中国近代绘画"
+                        },
+                        {
+                            id : "zkyijs",
+                            name : "中国竹刻艺术"
+                        }
+                    ];
+                    var imgArr = document.getElementsByClassName('tupian');
+                    var datupian = document.getElementsByClassName('datupian')
+                    for(var i =0;i<imgArr.length;i++){
+                        var text = imgArr[i].innerText;
+                        if(text.indexOf('-')>=0){
+                            if(text.split('-').length>2){
+                            var oldName = text.split('-')[0]+'-'+text.split('-')[1];
+                            var lastName = '-'+text.split('-')[2]; 
+                            }else{
+                            var oldName = text.split('-')[0];
+                            var lastName = '-'+text.split('-')[1];
+                            }
+                        }else{
+                            var oldName = text.split('.jpg')[0];
+                            var lastName = '.jpg\'';
+                        };
+                        var oldArr1 = oldName.split('').reverse().join('').split(/[a-zA-z\/]/);
+                        var oldArr2 =[];
+                        oldArr2[0] = oldArr1[0];
+                        oldArr2[1]= oldArr1[oldArr1.length-1];
+                        var oldArr = oldArr2.join('').split('').reverse().join('');
+                        //console.log(oldArr)
+                        var firstName =oldArr.split('\'')[0];
+                        var firstName1 = oldArr.split('\'')[1];                    
+                        var firstName2 = '';
+                        if(firstName1.split('-').length>=2){
+                            //console.log(firstName1)
+                            firstName2 = firstName1.split('-')[0];
+                            firstName1 = firstName1.split('-')[1];
+                        };
+                        var searchArr = oldName.split(oldArr.split('\'')[0]+'\'')[1].split(oldArr.split('\'')[1])[0].split('/');
+                        var searchName = searchArr[searchArr.length-1];
+                        if(firstName2){
+                            searchName = firstName2
+                        }
+                    
+                         
+                        var chinaName = '';
+                            for (var a = 0; a < newNameArr.length; a++){
+                                if(searchName === newNameArr[a].id){
+                                    chinaName = newNameArr[a].name
+                                }
+                            }
+                        imgArr[i].innerText = oldArr.split('\'')[0]+'\''+chinaName+firstName1+ lastName;
+                        datupian[i].style.display = 'block';
+                    }
+                    
+                }
+             </script>
     </body>
+
 </html>
 
 
+ 

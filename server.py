@@ -1,3 +1,4 @@
+#coding:utf-8
 import os
 import numpy as np
 from PIL import Image
@@ -28,10 +29,11 @@ def index():
         img.save(uploaded_img_path)
 
         query = fe.extract(img)
+        print (img, query)
         dists = np.linalg.norm(features - query, axis=1)  # Do search
-        ids = np.argsort(dists)[:30] # Top 30 results
+        ids = np.argsort(dists)[:500] # Top 100 results
         scores = [(dists[id], img_paths[id]) for id in ids]
-
+        print(scores)
         return render_template('index.html',
                                query_path=uploaded_img_path,
                                scores=scores)
